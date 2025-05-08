@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Run script
-        run: node your_script.js
+        run: node run pools:uniswap:all
 
       - name: Commit and push changes
         run: |
