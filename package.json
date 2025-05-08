@@ -13,14 +13,16 @@
   "type": "module",
   "scripts": {
     "pools:uniswap": "tsx ./scripts/pools/uniswap/versioned.ts",
-    "pools:uniswap:all": "tsx ./scripts/pools/uniswap/all.ts"
-  },
-  "dependencies": {
-    "@zenswap-analog/sdk": "0.1.15"
+    "pools:uniswap:all": "tsx ./scripts/pools/uniswap/all.ts",
+    "tokenlist:update": "tsx ./scripts/tokens/update.ts"
   },
   "devDependencies": {
+    "@uniswap/sdk-core": "^7.7.2",
+    "@uniswap/smart-order-router": "^4.21.0",
+    "@uniswap/token-lists": "^1.0.0-beta.34",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
     "tsx": "^4.19.4",
     "typescript": "5.8.3"
-  },
-  "packageManager": "yarn@1.22.22"
+  }
 }

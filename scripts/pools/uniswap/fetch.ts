@@ -170,7 +170,5 @@ export async function fetchPools(args: PoolsArgs): Promise<void> {
     writeLocalFile(dirPath, json, data);
 
     removeLocalFile(dirPath, csv);
-  } else {
-    removeLocalFile(dirPath, json);
   }
 }
