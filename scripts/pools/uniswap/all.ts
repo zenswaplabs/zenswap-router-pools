@@ -6,16 +6,16 @@ const mainnets = [
   ChainId.MAINNET,
   ChainId.ARBITRUM_ONE,
   ChainId.BASE,
-  ChainId.POLYGON,
-  ChainId.UNICHAIN,
-  ChainId.OPTIMISM,
+  // ChainId.POLYGON,
+  // ChainId.UNICHAIN,
+  // ChainId.OPTIMISM,
 ];
 
 const testnets = [
   ChainId.SEPOLIA,
   ChainId.ARBITRUM_SEPOLIA,
   ChainId.BASE_SEPOLIA,
-  ChainId.UNICHAIN_SEPOLIA
+  // ChainId.UNICHAIN_SEPOLIA
 ];
 
 const versions = [2, 3, 4];

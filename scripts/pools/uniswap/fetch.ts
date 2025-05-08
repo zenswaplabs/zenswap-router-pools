@@ -84,6 +84,7 @@ export function parseArgs(): PoolsArgs {
 
 export async function fetchPools(args: PoolsArgs): Promise<void> {
   const { chainId, version, whitelist, reserve } = args;
+
   console.info('\n');
   console.info(`[${chainId}] Fetch uniswap pools, version: ${version}, whitelist tokens: ${whitelist};`);
 
