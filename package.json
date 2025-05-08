@@ -1,0 +1,26 @@
+{
+  "name": "zenswap-router-pools",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zenswaplabs/zenswap-router-pools"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pools:uniswap": "tsx ./scripts/pools/uniswap/versioned.ts",
+    "pools:uniswap:all": "tsx ./scripts/pools/uniswap/all.ts"
+  },
+  "dependencies": {
+    "@zenswap-analog/sdk": "0.1.15"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.4",
+    "typescript": "5.8.3"
+  },
+  "packageManager": "yarn@1.22.22"
+}
