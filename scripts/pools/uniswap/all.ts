@@ -2,31 +2,33 @@ import { ChainId } from '@uniswap/sdk-core';
 
 import { fetchPools } from './fetch';
 
-const mainnets = [
-  ChainId.MAINNET,
-  ChainId.ARBITRUM_ONE,
-  ChainId.BASE,
-  // ChainId.POLYGON,
-  // ChainId.UNICHAIN,
-  // ChainId.OPTIMISM,
+type ChainConfig = {
+  chainId: number;
+  whitelist: boolean;
+  reserve?: number;
+};
+
+const mainnets: ChainConfig[] = [
+  { chainId: ChainId.MAINNET, whitelist: true },
+  { chainId: ChainId.ARBITRUM_ONE, whitelist: true },
+  { chainId: ChainId.BASE, whitelist: true },
 ];
 
-const testnets = [
-  ChainId.SEPOLIA,
-  ChainId.ARBITRUM_SEPOLIA,
-  ChainId.BASE_SEPOLIA,
-  // ChainId.UNICHAIN_SEPOLIA
+const testnets: ChainConfig[] = [
+  { chainId: ChainId.SEPOLIA, whitelist: false, reserve: 0 },
+  { chainId: ChainId.ARBITRUM_SEPOLIA, whitelist: false, reserve: 0 },
+  { chainId: ChainId.BASE_SEPOLIA, whitelist: false, reserve: 0 },
 ];
 
 const versions = [2, 3, 4];
 
-async function fetchChainsPools(chains: ChainId[], whitelist: boolean, reserve?: number): Promise<void> {
-  for (const chainId of chains) {
+async function fetchChainsPools(chainConfigs: ChainConfig[]): Promise<void> {
+  for (const config of chainConfigs) {
     for (const version of versions) {
       try {
-        await fetchPools({ chainId, version, reserve, whitelist });
+        await fetchPools({ ...config, version });
       } catch {
-        console.info(`[${chainId}] Fetching error, skip;`);
+        console.info(`[${config.chainId}] Fetching error, skip;`);
       }
     }
   }
@@ -35,8 +37,8 @@ async function fetchChainsPools(chains: ChainId[], whitelist: boolean, reserve?:
 async function main() {
   console.info('Fetching all uniswap pools...');
 
-  await fetchChainsPools(testnets, false, 0);
-  await fetchChainsPools(mainnets, true);
+  await fetchChainsPools(testnets);
+  await fetchChainsPools(mainnets);
 
   console.info('Fetching completed!');
 }
