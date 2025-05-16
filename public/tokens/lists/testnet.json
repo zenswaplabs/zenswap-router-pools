@@ -1,0 +1,97 @@
+{
+  "name": "Zenswap Testnet",
+  "timestamp": "2025-05-16T09:50:30.083Z",
+  "version": {
+    "major": 0,
+    "minor": 1,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "ipfs://QmNa8mQkrNKp1WEEeGjFezDmDeodkWRevGFN8JCV7b4Xir",
+  "keywords": [
+    "zenswap",
+    "testnet"
+  ],
+  "tokens": [
+    {
+      "name": "Wrapped Ether",
+      "address": "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14",
+      "symbol": "WETH",
+      "decimals": 18,
+      "chainId": 11155111,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png"
+    },
+    {
+      "name": "USDCoin",
+      "address": "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+      "symbol": "USDC",
+      "decimals": 6,
+      "chainId": 11155111,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
+    },
+    {
+      "name": "Uniswap",
+      "address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "symbol": "UNI",
+      "decimals": 18,
+      "chainId": 11155111,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984/logo.png"
+    },
+    {
+      "name": "USDCoin",
+      "address": "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+      "symbol": "USDC",
+      "decimals": 6,
+      "chainId": 9007199254740991,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
+    },
+    {
+      "name": "Wrapped Ether",
+      "address": "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14",
+      "symbol": "WETH",
+      "decimals": 18,
+      "chainId": 9007199254740991,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png"
+    },
+    {
+      "name": "Uniswap",
+      "address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "symbol": "UNI",
+      "decimals": 18,
+      "chainId": 9007199254740991,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984/logo.png"
+    },
+    {
+      "name": "USDCoin",
+      "address": "0x75faf114eafb1bdbe2f0316df893fd58ce46aa4d",
+      "symbol": "USDC",
+      "decimals": 6,
+      "chainId": 421614,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
+    },
+    {
+      "name": "Wrapped Ether",
+      "address": "0x980B62Da83eFf3D4576C647993b0c1D7faf17c73",
+      "symbol": "WETH",
+      "decimals": 18,
+      "chainId": 421614,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png"
+    },
+    {
+      "name": "Wrapped Ether",
+      "address": "0x4200000000000000000000000000000000000006",
+      "symbol": "WETH",
+      "decimals": 18,
+      "chainId": 84532,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png"
+    },
+    {
+      "name": "USDCoin",
+      "address": "0x036cbd53842c5426634e7929541ec2318f3dcf7e",
+      "symbol": "USDC",
+      "decimals": 6,
+      "chainId": 84532,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
+    }
+  ]
+}

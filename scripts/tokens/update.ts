@@ -24,7 +24,20 @@ const ExternalLists: TokenListDef[] = [
   },
 ];
 
-const InternalList = {
+const InternalLists: TokenListDef[] = [
+  {
+    fileName: 'testnet.json',
+    url: '',
+    responseType: ResponseType.Json,
+  },
+  {
+    fileName: 'mainnet.json',
+    url: '',
+    responseType: ResponseType.Json,
+  },
+];
+
+const AppListMerged = {
   fileName: 'zenswap.json',
   url: '',
   responseType: ResponseType.Json,
@@ -104,7 +117,7 @@ function validate(list: TokenListDef): boolean {
 }
 
 async function main(): Promise<void> {
-  const validLists: TokenListDef[] = [];
+  const validLists: TokenListDef[] = [...InternalLists];
 
   await Promise.all(
     ExternalLists.map(async (list) => {
@@ -116,7 +129,8 @@ async function main(): Promise<void> {
     })
   );
 
-  const appList = readLocalList(InternalList);
+  const appList = readLocalList(AppListMerged);
+
   const updates: any[] = [];
 
   for (const validList of validLists) {
@@ -124,7 +138,7 @@ async function main(): Promise<void> {
 
     for (const token of tokens) {
       const exists = appList.tokens.find(
-        (appToken) => appToken.chainId === token.chainId && appToken.address === token.address
+        (appToken) => appToken.chainId === token.chainId && appToken.address.toLowerCase() === token.address.toLowerCase()
       );
 
       if (exists) {
@@ -145,7 +159,7 @@ async function main(): Promise<void> {
 
     const formatted = formatList(appList);
 
-    writeLocalFile(InternalList, JSON.stringify(formatted, null, 2));
+    writeLocalFile(AppListMerged, JSON.stringify(formatted, null, 2));
   } else {
     console.info('No updates.');
   }
