@@ -1,9 +1,9 @@
 {
   "name": "Uniswap Labs Default",
-  "timestamp": "2025-05-06T15:26:47.481Z",
+  "timestamp": "2025-05-09T19:11:12.581Z",
   "version": {
     "major": 13,
-    "minor": 33,
+    "minor": 34,
     "patch": 0
   },
   "tags": {},
@@ -2156,6 +2156,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/9368/thumb/swipe.png?1566792311",
       "address": "0x8CE9137d39326AD0cD6491fb5CC0CbA0e089b6A9",
       "decimals": 18
+    },
+    {
+      "chainId": 1,
+      "address": "0xE6Bfd33F52d82Ccb5b37E16D3dD81f9FFDAbB195",
+      "name": "Space and Time",
+      "symbol": "SXT",
+      "decimals": 18,
+      "logoURI": "https://coin-images.coingecko.com/coins/images/55424/large/sxt-token_circle.jpg?1745935919"
     },
     {
       "chainId": 1,
@@ -7271,6 +7279,14 @@
     },
     {
       "chainId": 8453,
+      "address": "0x75f2231A289Ea35895246b21e9c6E5BbF5ce69ED",
+      "name": "AltLayer",
+      "symbol": "ALT",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/34608/standard/Logomark_200x200.png"
+    },
+    {
+      "chainId": 8453,
       "address": "0xB3B32F9f8827D4634fE7d973Fa1034Ec9fdDB3B3",
       "name": "B3",
       "symbol": "B3",
@@ -7359,18 +7375,10 @@
     },
     {
       "chainId": 8453,
-      "address": "0xB1E1f3Cc2B6fE4420C1Ac82022b457018Eb628ff",
-      "name": "Covalent X Token",
-      "symbol": "CXT",
-      "decimals": 18,
-      "logoURI": "https://assets.coingecko.com/coins/images/39177/large/CXT_Ticker.png?1720829918"
-    },
-    {
-      "name": "Dai Stablecoin",
       "address": "0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb",
+      "name": "Dai Stablecoin",
       "symbol": "DAI",
       "decimals": 18,
-      "chainId": 8453,
       "logoURI": "https://ethereum-optimism.github.io/data/DAI/logo.svg"
     },
     {
@@ -7447,11 +7455,19 @@
     },
     {
       "chainId": 8453,
-      "address": "0x0F4d237B09Cb37d207BA60353Dc254d4530D4dF1",
-      "name": "The Graph",
-      "symbol": "GRT",
+      "address": "0x968B2323d4b005C7D39c67D31774FE83c9943A60",
+      "name": "Ampleforth Governance Token",
+      "symbol": "FORTH",
       "decimals": 18,
-      "logoURI": "https://assets.coingecko.com/coins/images/13397/thumb/Graph_Token.png?1608145566"
+      "logoURI": "https://assets.coingecko.com/coins/images/14917/thumb/photo_2021-04-22_00.00.03.jpeg?1619020835"
+    },
+    {
+      "chainId": 8453,
+      "address": "0x2dbe0d779c7A04F7a5de83326973effE23356930",
+      "name": "ShapeShift FOX Token",
+      "symbol": "FOX",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/9988/thumb/FOX.png?1574330622"
     },
     {
       "chainId": 8453,
@@ -7503,6 +7519,22 @@
     },
     {
       "chainId": 8453,
+      "address": "0x5259384690aCF240e9b0A8811bD0FFbFBDdc125C",
+      "name": "Liquity",
+      "symbol": "LQTY",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/14665/thumb/200-lqty-icon.png?1617631180"
+    },
+    {
+      "chainId": 8453,
+      "address": "0xE6bAA3Fedb5Dc88b2c59ba4812388Bb0906D19dB",
+      "name": "PolySwarm",
+      "symbol": "NCT",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/2843/thumb/ImcYCVfX_400x400.jpg?1628519767"
+    },
+    {
+      "chainId": 8453,
       "address": "0xca73ed1815e5915489570014e024b7EbE65dE679",
       "name": "Odos Token",
       "symbol": "ODOS",
@@ -7540,14 +7572,6 @@
       "symbol": "PERP",
       "decimals": 18,
       "logoURI": "https://assets.coingecko.com/coins/images/12381/thumb/60d18e06844a844ad75901a9_mark_only_03.png?1628674771"
-    },
-    {
-      "chainId": 8453,
-      "address": "0xfA980cEd6895AC314E7dE34Ef1bFAE90a5AdD21b",
-      "name": "Prime",
-      "symbol": "PRIME",
-      "decimals": 18,
-      "logoURI": "https://assets.coingecko.com/coins/images/29053/large/PRIMELOGOOO.png?1676976222"
     },
     {
       "chainId": 8453,
@@ -7607,14 +7631,6 @@
     },
     {
       "chainId": 8453,
-      "address": "0x236aa50979D5f3De3Bd1Eeb40E81137F22ab794b",
-      "name": "tBTC",
-      "symbol": "tBTC",
-      "decimals": 18,
-      "logoURI": "https://raw.githubusercontent.com/uniswap/assets/master/blockchains/ethereum/assets/0x18084fbA666a33d37592fA2633fD49a74DD93a88/logo.png"
-    },
-    {
-      "chainId": 8453,
       "address": "0xAC1Bd2486aAf3B5C0fc3Fd868558b082a531B2B4",
       "name": "Toshi",
       "symbol": "TOSHI",
@@ -7638,12 +7654,28 @@
       "logoURI": "https://ethereum-optimism.github.io/data/USDC/logo.png"
     },
     {
+      "name": "Tether USD",
+      "address": "0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2",
+      "symbol": "USDT",
+      "decimals": 6,
+      "chainId": 8453,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png"
+    },
+    {
       "chainId": 8453,
       "address": "0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
       "name": "Venice Token",
       "symbol": "VVV",
       "decimals": 18,
       "logoURI": "https://assets.coingecko.com/coins/images/54023/standard/Venice_Token_(1).png?1738017546"
+    },
+    {
+      "chainId": 8453,
+      "name": "Wrapped Ampleforth",
+      "symbol": "WAMPL",
+      "logoURI": "https://assets.coingecko.com/coins/images/20825/thumb/photo_2021-11-25_02-05-11.jpg?1637811951",
+      "address": "0x489fe42C267fe0366B16b0c39e7AEEf977E841eF",
+      "decimals": 18
     },
     {
       "chainId": 8453,
@@ -7654,12 +7686,28 @@
       "logoURI": "https://assets.coingecko.com/coins/images/26133/large/WELL.png?1696525221"
     },
     {
-      "chainId": 8453,
-      "address": "0x4200000000000000000000000000000000000006",
       "name": "Wrapped Ether",
+      "address": "0x4200000000000000000000000000000000000006",
       "symbol": "WETH",
       "decimals": 18,
+      "chainId": 8453,
       "logoURI": "https://ethereum-optimism.github.io/data/WETH/logo.png"
+    },
+    {
+      "chainId": 8453,
+      "address": "0xD7B99ffB8B2afc6fe013a17207cbe50f223aDc94",
+      "name": "XYO Network",
+      "symbol": "XYO",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/4519/thumb/XYO_Network-logo.png?1547039819"
+    },
+    {
+      "chainId": 8453,
+      "address": "0x9EaF8C1E34F05a589EDa6BAfdF391Cf6Ad3CB239",
+      "name": "yearn finance",
+      "symbol": "YFI",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/11849/thumb/yfi-192x192.png?1598325330"
     },
     {
       "chainId": 8453,

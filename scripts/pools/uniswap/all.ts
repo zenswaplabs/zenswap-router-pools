@@ -12,12 +12,13 @@ const mainnets: ChainConfig[] = [
   { chainId: ChainId.MAINNET, whitelist: true },
   { chainId: ChainId.ARBITRUM_ONE, whitelist: true },
   { chainId: ChainId.BASE, whitelist: true },
+  { chainId: ChainId.AVALANCHE, whitelist: true },
 ];
 
 const testnets: ChainConfig[] = [
-  { chainId: ChainId.SEPOLIA, whitelist: false, reserve: 0 },
-  { chainId: ChainId.ARBITRUM_SEPOLIA, whitelist: false, reserve: 0 },
-  { chainId: ChainId.BASE_SEPOLIA, whitelist: false, reserve: 0 },
+  { chainId: ChainId.SEPOLIA, whitelist: true, reserve: 0 },
+  { chainId: ChainId.ARBITRUM_SEPOLIA, whitelist: true, reserve: 0 },
+  { chainId: ChainId.BASE_SEPOLIA, whitelist: true, reserve: 0 },
 ];
 
 const versions = [2, 3, 4];
