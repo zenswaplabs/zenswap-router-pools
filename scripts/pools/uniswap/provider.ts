@@ -216,6 +216,8 @@ export class SubgraphProviderV2 extends SubgraphProvider<RawPoolV2, PoolV2, Flat
         return `${base}/EXBcAqmvQi6VAnE9X4MNK83LPeA6c1PsGskffbmThoeK`;
       case ChainId.ARBITRUM_ONE:
         return `${base}/CStW6CSQbHoXsgKuVCrk3uShGA4JX3CAzzv2x9zaGf8w`;
+      case ChainId.BASE:
+        return `${base}/D31gzGUtVNhHNdnxeELUBdch5rzDRm5cddvae9GzhCLu`;
       case ChainId.UNICHAIN:
         return `${base}/8vvhJXc9Fi2xpc3wXtRpYrWVYfcxThU973HhBukmFh83`;
       default:

@@ -21,7 +21,7 @@ const testnets: ChainConfig[] = [
   { chainId: ChainId.BASE_SEPOLIA, whitelist: true, reserve: 0 },
 ];
 
-const versions = [2, 3, 4];
+const versions = [2, 3];
 
 async function fetchChainsPools(chainConfigs: ChainConfig[]): Promise<void> {
   for (const config of chainConfigs) {

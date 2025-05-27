@@ -1,8 +1,7 @@
-import { ID_TO_NETWORK_NAME } from '@uniswap/smart-order-router';
-
 import fs from 'fs';
 
 import { getProvider } from './provider';
+import { getNetworkId } from './utils';
 
 const apiKey = '606af22308a2e5690afe6ef924423911';
 
@@ -99,7 +98,7 @@ export async function fetchPools(args: PoolsArgs): Promise<void> {
   }
 
   const dirPath = `./public/pools/uniswap/v${version}`;
-  const chainName = ID_TO_NETWORK_NAME(chainId);
+  const chainName = getNetworkId(chainId);
   const json = `${chainName}.json`;
   const csv = `${chainName}.csv`;
 

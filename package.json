@@ -18,11 +18,12 @@
   },
   "devDependencies": {
     "@uniswap/sdk-core": "^7.7.2",
-    "@uniswap/smart-order-router": "^4.21.0",
     "@uniswap/token-lists": "^1.0.0-beta.34",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
+    "graphql-request": "^7.2.0",
     "tsx": "^4.19.4",
     "typescript": "5.8.3"
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }
