@@ -1,9 +1,9 @@
 {
   "name": "Uniswap Labs Default",
-  "timestamp": "2025-05-09T19:11:12.581Z",
+  "timestamp": "2025-06-11T15:21:39.519Z",
   "version": {
     "major": 13,
-    "minor": 34,
+    "minor": 36,
     "patch": 0
   },
   "tags": {},
@@ -452,6 +452,14 @@
       "symbol": "C98",
       "decimals": 18,
       "logoURI": "https://assets.coingecko.com/coins/images/17117/thumb/logo.png?1626412904"
+    },
+    {
+      "name": "PancakeSwap",
+      "address": "0x152649eA73beAb28c5b49B26eb48f7EAD6d4c898",
+      "symbol": "CAKE",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://coin-images.coingecko.com/coins/images/12632/large/pancakeswap-cake-logo_%281%29.png?1696512440"
     },
     {
       "chainId": 1,
@@ -1196,6 +1204,14 @@
       "symbol": "L3",
       "decimals": 18,
       "logoURI": "https://assets.coingecko.com/coins/images/37768/large/Square.png"
+    },
+    {
+      "name": "Lagrange",
+      "address": "0x0fc2a55d5BD13033f1ee0cdd11f60F7eFe66f467",
+      "symbol": "LA",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/36510.png"
     },
     {
       "chainId": 1,
@@ -7279,14 +7295,6 @@
     },
     {
       "chainId": 8453,
-      "address": "0x75f2231A289Ea35895246b21e9c6E5BbF5ce69ED",
-      "name": "AltLayer",
-      "symbol": "ALT",
-      "decimals": 18,
-      "logoURI": "https://assets.coingecko.com/coins/images/34608/standard/Logomark_200x200.png"
-    },
-    {
-      "chainId": 8453,
       "address": "0xB3B32F9f8827D4634fE7d973Fa1034Ec9fdDB3B3",
       "name": "B3",
       "symbol": "B3",
@@ -7343,11 +7351,27 @@
     },
     {
       "chainId": 8453,
+      "address": "0xcbD06E5A2B0C65597161de254AA074E489dEb510",
+      "name": "Coinbase Wrapped DOGE",
+      "symbol": "CBDOGE",
+      "decimals": 8,
+      "logoURI": "https://coin-images.coingecko.com/coins/images/66268/large/Coinbase_Wrapped_Doge_%28cbDOGE%29.png?1749023465"
+    },
+    {
+      "chainId": 8453,
       "address": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
       "name": "Coinbase Wrapped Staked ETH",
       "symbol": "cbETH",
       "decimals": 18,
       "logoURI": "https://ethereum-optimism.github.io/data/cbETH/logo.svg"
+    },
+    {
+      "chainId": 8453,
+      "address": "0xcb585250f852C6c6bf90434AB21A00f02833a4af",
+      "name": "Coinbase Wrapped XRP",
+      "symbol": "cbXRP",
+      "decimals": 6,
+      "logoURI": "https://coin-images.coingecko.com/coins/images/66267/large/Coinbase_Wrapped_XPR_%28cbXRP%29.png?1749023398"
     },
     {
       "chainId": 8453,
@@ -7358,11 +7382,11 @@
       "logoURI": "https://coin-images.coingecko.com/coins/images/51440/large/CLANKER.png?1731232869"
     },
     {
-      "chainId": 8453,
-      "address": "0x9e1028F5F1D5eDE59748FFceE5532509976840E0",
       "name": "Compound",
+      "address": "0x9e1028F5F1D5eDE59748FFceE5532509976840E0",
       "symbol": "COMP",
       "decimals": 18,
+      "chainId": 8453,
       "logoURI": "https://ethereum-optimism.github.io/data/COMP/logo.svg"
     },
     {
@@ -7372,6 +7396,38 @@
       "symbol": "COOKIE",
       "decimals": 18,
       "logoURI": "https://coin-images.coingecko.com/coins/images/38450/large/cookie_token_logo_200x200.png?1733194528"
+    },
+    {
+      "name": "Curve DAO Token",
+      "address": "0x8Ee73c484A26e0A5df2Ee2a4960B789967dd0415",
+      "symbol": "CRV",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xD533a949740bb3306d119CC777fa900bA034cd52/logo.png"
+    },
+    {
+      "chainId": 8453,
+      "address": "0x259Fac10c5CbFEFE3E710e1D9467f70a76138d45",
+      "name": "Cartesi",
+      "symbol": "CTSI",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/11038/thumb/cartesi.png?1592288021"
+    },
+    {
+      "chainId": 8453,
+      "address": "0xBB22Ff867F8Ca3D5F2251B4084F6Ec86D4666E14",
+      "name": "Cryptex Finance",
+      "symbol": "CTX",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/14932/thumb/glossy_icon_-_C200px.png?1619073171"
+    },
+    {
+      "chainId": 8453,
+      "address": "0xB1E1f3Cc2B6fE4420C1Ac82022b457018Eb628ff",
+      "name": "Covalent X Token",
+      "symbol": "CXT",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/39177/large/CXT_Ticker.png?1720829918"
     },
     {
       "chainId": 8453,
@@ -7471,19 +7527,11 @@
     },
     {
       "chainId": 8453,
-      "address": "0xBCBAf311ceC8a4EAC0430193A528d9FF27ae38C1",
-      "name": "IoTeX",
-      "symbol": "IOTX",
+      "address": "0x4BfAa776991E85e5f8b1255461cbbd216cFc714f",
+      "name": "HOME",
+      "symbol": "HOME",
       "decimals": 18,
-      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/2777.png"
-    },
-    {
-      "chainId": 8453,
-      "name": "Geojam",
-      "symbol": "JAM",
-      "logoURI": "https://assets.coingecko.com/coins/images/24648/thumb/ey40AzBN_400x400.jpg?1648507272",
-      "address": "0xFf9957816c813C5Ad0b9881A8990Df1E3AA2a057",
-      "decimals": 18
+      "logoURI": "https://coin-images.coingecko.com/coins/images/54873/large/defi-app.png?1742235743"
     },
     {
       "chainId": 8453,
@@ -7503,14 +7551,6 @@
     },
     {
       "chainId": 8453,
-      "address": "0xDAE49C25fAd3a62a8e8bFB6dA12c46bE611f9f7a",
-      "name": "KRYLL",
-      "symbol": "KRL",
-      "decimals": 18,
-      "logoURI": "https://assets.coingecko.com/coins/images/2807/thumb/krl.png?1547036979"
-    },
-    {
-      "chainId": 8453,
       "address": "0xd7468c14ae76C3Fc308aEAdC223D5D1F71d3c171",
       "name": "LCX",
       "symbol": "LCX",
@@ -7526,12 +7566,28 @@
       "logoURI": "https://assets.coingecko.com/coins/images/14665/thumb/200-lqty-icon.png?1617631180"
     },
     {
-      "chainId": 8453,
-      "address": "0xE6bAA3Fedb5Dc88b2c59ba4812388Bb0906D19dB",
-      "name": "PolySwarm",
-      "symbol": "NCT",
+      "name": "LoopringCoin V2",
+      "address": "0x0D760ee479401Bb4C40BDB7604b329FfF411b3f2",
+      "symbol": "LRC",
       "decimals": 18,
-      "logoURI": "https://assets.coingecko.com/coins/images/2843/thumb/ImcYCVfX_400x400.jpg?1628519767"
+      "chainId": 8453,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xBBbbCA6A901c926F240b89EacB641d8Aec7AEafD/logo.png"
+    },
+    {
+      "chainId": 8453,
+      "address": "0xB676f87A6E701f0DE8De5Ab91B56b66109766DB1",
+      "name": "BLOCKLORDS",
+      "symbol": "LRDS",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/34775/standard/LRDS_PNG.png"
+    },
+    {
+      "chainId": 8453,
+      "name": "Liquity USD",
+      "symbol": "LUSD",
+      "logoURI": "https://assets.coingecko.com/coins/images/14666/thumb/Group_3.png?1617631327",
+      "address": "0x368181499736d0c0CC614DBB145E2EC1AC86b8c6",
+      "decimals": 18
     },
     {
       "chainId": 8453,
@@ -7540,38 +7596,6 @@
       "symbol": "ODOS",
       "decimals": 18,
       "logoURI": "https://coin-images.coingecko.com/coins/images/52914/large/odos.jpg?1734678948"
-    },
-    {
-      "chainId": 8453,
-      "address": "0x7002458B1DF59EccB57387bC79fFc7C29E22e6f7",
-      "name": "Origin Protocol",
-      "symbol": "OGN",
-      "decimals": 18,
-      "logoURI": "https://assets.coingecko.com/coins/images/3296/thumb/op.jpg?1547037878"
-    },
-    {
-      "chainId": 8453,
-      "address": "0xA99F6e6785Da0F5d6fB42495Fe424BCE029Eeb3E",
-      "name": "Pendle",
-      "symbol": "PENDLE",
-      "decimals": 18,
-      "logoURI": "https://coin-images.coingecko.com/coins/images/15069/large/Pendle_Logo_Normal-03.png?1696514728"
-    },
-    {
-      "chainId": 8453,
-      "address": "0xB4fDe59a779991bfB6a52253B51947828b982be3",
-      "name": "Pepe",
-      "symbol": "PEPE",
-      "decimals": 18,
-      "logoURI": "https://assets.coingecko.com/coins/images/29850/large/pepe-token.jpeg?1682922725"
-    },
-    {
-      "chainId": 8453,
-      "address": "0xCD6dDDa305955AcD6b94b934f057E8b0daaD58dE",
-      "name": "Perpetual Protocol",
-      "symbol": "PERP",
-      "decimals": 18,
-      "logoURI": "https://assets.coingecko.com/coins/images/12381/thumb/60d18e06844a844ad75901a9_mark_only_03.png?1628674771"
     },
     {
       "chainId": 8453,
@@ -7638,6 +7662,14 @@
       "logoURI": "https://coin-images.coingecko.com/coins/images/31126/large/Toshi_Logo_-_Circular.png?1721677476"
     },
     {
+      "name": "Uniswap",
+      "address": "0xc3De830EA07524a0761646a6a4e4be0e114a3C83",
+      "symbol": "UNI",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "ipfs://QmXttGpZrECX5qCyXbBQiqgQNytVGeZW5Anewvh2jc4psg"
+    },
+    {
       "chainId": 8453,
       "address": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
       "name": "USD Base Coin",
@@ -7646,11 +7678,11 @@
       "logoURI": "https://ethereum-optimism.github.io/data/USDC/logo.png"
     },
     {
-      "chainId": 8453,
-      "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
       "name": "USD Coin",
+      "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
       "symbol": "USDC",
       "decimals": 6,
+      "chainId": 8453,
       "logoURI": "https://ethereum-optimism.github.io/data/USDC/logo.png"
     },
     {
@@ -7692,22 +7724,6 @@
       "decimals": 18,
       "chainId": 8453,
       "logoURI": "https://ethereum-optimism.github.io/data/WETH/logo.png"
-    },
-    {
-      "chainId": 8453,
-      "address": "0xD7B99ffB8B2afc6fe013a17207cbe50f223aDc94",
-      "name": "XYO Network",
-      "symbol": "XYO",
-      "decimals": 18,
-      "logoURI": "https://assets.coingecko.com/coins/images/4519/thumb/XYO_Network-logo.png?1547039819"
-    },
-    {
-      "chainId": 8453,
-      "address": "0x9EaF8C1E34F05a589EDa6BAfdF391Cf6Ad3CB239",
-      "name": "yearn finance",
-      "symbol": "YFI",
-      "decimals": 18,
-      "logoURI": "https://assets.coingecko.com/coins/images/11849/thumb/yfi-192x192.png?1598325330"
     },
     {
       "chainId": 8453,
@@ -7964,6 +7980,14 @@
       "symbol": "BUSD",
       "decimals": 18,
       "logoURI": "https://assets.coingecko.com/coins/images/9576/thumb/BUSD.png?1568947766"
+    },
+    {
+      "name": "PancakeSwap",
+      "address": "0xCdc343ebf71e38F003eD6c80171F5B8D7cF58860",
+      "symbol": "CAKE",
+      "decimals": 18,
+      "chainId": 42161,
+      "logoURI": "https://coin-images.coingecko.com/coins/images/12632/large/pancakeswap-cake-logo_%281%29.png?1696512440"
     },
     {
       "chainId": 42161,
@@ -8719,6 +8743,14 @@
     },
     {
       "chainId": 42161,
+      "address": "0x6380F3d0C1412a80EB00F49064DA30749DB991DE",
+      "name": "Portal",
+      "symbol": "PORTAL",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/35436/standard/portal.jpeg"
+    },
+    {
+      "chainId": 42161,
       "address": "0x4e91F2AF1ee0F84B529478f19794F5AFD423e4A6",
       "name": "Power Ledger",
       "symbol": "POWR",
@@ -8748,6 +8780,14 @@
       "symbol": "QNT",
       "decimals": 18,
       "logoURI": "https://assets.coingecko.com/coins/images/3370/thumb/5ZOu7brX_400x400.jpg?1612437252"
+    },
+    {
+      "chainId": 42161,
+      "address": "0x3c45038f4807c5bb72F6BC72c2A2B9c012155e49",
+      "name": "Radicle",
+      "symbol": "RAD",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/14013/thumb/radicle.png?1614402918"
     },
     {
       "chainId": 42161,

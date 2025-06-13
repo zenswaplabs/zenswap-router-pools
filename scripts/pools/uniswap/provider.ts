@@ -1,6 +1,6 @@
-import { ChainId } from '@uniswap/sdk-core';
+import { ChainId } from "@uniswap/sdk-core";
 
-import { gql, GraphQLClient } from 'graphql-request';
+import { gql, GraphQLClient } from "graphql-request";
 
 // only necessary fields
 export type Pool = {
@@ -40,13 +40,13 @@ export type PoolV2 = Pool & {
 };
 
 export type FlatPoolV2 = [
-  PoolV2['id'],
-  PoolV2['token0']['id'],
-  PoolV2['token1']['id'],
-  PoolV2['createdAtBlockNumber'],
-  PoolV2['supply'],
-  PoolV2['reserve'],
-  PoolV2['reserveUSD'],
+  PoolV2["id"],
+  PoolV2["token0"]["id"],
+  PoolV2["token1"]["id"],
+  PoolV2["createdAtBlockNumber"],
+  PoolV2["supply"],
+  PoolV2["reserve"],
+  PoolV2["reserveUSD"]
 ];
 
 export type RawPoolV3 = RawPool & {
@@ -64,14 +64,14 @@ export type PoolV3 = Pool & {
 };
 
 export type FlatPoolV3 = [
-  PoolV3['id'],
-  PoolV3['token0']['id'],
-  PoolV3['token1']['id'],
-  PoolV3['createdAtBlockNumber'],
-  PoolV3['feeTier'],
-  PoolV3['liquidity'],
-  PoolV3['tvlETH'],
-  PoolV3['tvlUSD'],
+  PoolV3["id"],
+  PoolV3["token0"]["id"],
+  PoolV3["token1"]["id"],
+  PoolV3["createdAtBlockNumber"],
+  PoolV3["feeTier"],
+  PoolV3["liquidity"],
+  PoolV3["tvlETH"],
+  PoolV3["tvlUSD"]
 ];
 
 export type RawPoolV4 = RawPool & {
@@ -93,16 +93,16 @@ export type PoolV4 = Pool & {
 };
 
 export type FlatPoolV4 = [
-  PoolV4['id'],
-  PoolV4['token0']['id'],
-  PoolV4['token1']['id'],
-  PoolV4['createdAtBlockNumber'],
-  PoolV4['feeTier'],
-  PoolV4['tickSpacing'],
-  PoolV4['hooks'],
-  PoolV4['liquidity'],
-  PoolV4['tvlETH'],
-  PoolV4['tvlUSD'],
+  PoolV4["id"],
+  PoolV4["token0"]["id"],
+  PoolV4["token1"]["id"],
+  PoolV4["createdAtBlockNumber"],
+  PoolV4["feeTier"],
+  PoolV4["tickSpacing"],
+  PoolV4["hooks"],
+  PoolV4["liquidity"],
+  PoolV4["tvlETH"],
+  PoolV4["tvlUSD"]
 ];
 
 export type FilterVariables = {
@@ -116,7 +116,11 @@ export type QueryVariables = {
   filter: any;
 };
 
-export abstract class SubgraphProvider<TRawPool extends RawPool, TPool extends Pool, TFlatPool> {
+export abstract class SubgraphProvider<
+  TRawPool extends RawPool,
+  TPool extends Pool,
+  TFlatPool
+> {
   protected apiKey!: string;
   protected chainId!: ChainId;
   protected client!: GraphQLClient;
@@ -172,11 +176,18 @@ export abstract class SubgraphProvider<TRawPool extends RawPool, TPool extends P
     let total = 0;
 
     do {
-      lastBlockNumber = poolsPage.length > 0 ? poolsPage[poolsPage.length - 1].createdAtBlockNumber : lastBlockNumber;
+      lastBlockNumber =
+        poolsPage.length > 0
+          ? poolsPage[poolsPage.length - 1].createdAtBlockNumber
+          : lastBlockNumber;
 
       poolsPage.forEach((pool) => lastIds.add(pool.id));
 
-      const filter = this.poolFilter({ blockNumber: lastBlockNumber, trackedReserveETH, tokens });
+      const filter = this.poolFilter({
+        blockNumber: lastBlockNumber,
+        trackedReserveETH,
+        tokens,
+      });
       const variables = { pageSize, filter };
 
       const response = await this.getPools(variables);
@@ -206,7 +217,11 @@ export abstract class SubgraphProvider<TRawPool extends RawPool, TPool extends P
   }
 }
 
-export class SubgraphProviderV2 extends SubgraphProvider<RawPoolV2, PoolV2, FlatPoolV2> {
+export class SubgraphProviderV2 extends SubgraphProvider<
+  RawPoolV2,
+  PoolV2,
+  FlatPoolV2
+> {
   protected override getUrl(): string {
     const base = `https://gateway.thegraph.com/api/${this.apiKey}/subgraphs/id`;
     switch (this.chainId) {
@@ -221,7 +236,9 @@ export class SubgraphProviderV2 extends SubgraphProvider<RawPoolV2, PoolV2, Flat
       case ChainId.UNICHAIN:
         return `${base}/8vvhJXc9Fi2xpc3wXtRpYrWVYfcxThU973HhBukmFh83`;
       default:
-        throw new Error(`v2 subgraph endpoint for chainId ${this.chainId} is not set`);
+        throw new Error(
+          `v2 subgraph endpoint for chainId ${this.chainId} is not set`
+        );
     }
   }
 
@@ -242,7 +259,15 @@ export class SubgraphProviderV2 extends SubgraphProvider<RawPoolV2, PoolV2, Flat
   }
 
   public override fromFlat(flatPool: FlatPool): PoolV2 {
-    const [id, token0, token1, createdAtBlockNumber, supply, reserve, reserveUSD] = flatPool;
+    const [
+      id,
+      token0,
+      token1,
+      createdAtBlockNumber,
+      supply,
+      reserve,
+      reserveUSD,
+    ] = flatPool;
 
     return {
       id: id,
@@ -276,14 +301,14 @@ export class SubgraphProviderV2 extends SubgraphProvider<RawPoolV2, PoolV2, Flat
     const filter = {};
 
     if (Number.isFinite(blockNumber)) {
-      filter['createdAtBlockNumber_gte'] = blockNumber;
+      filter["createdAtBlockNumber_gte"] = blockNumber;
     }
     if (Number.isFinite(trackedReserveETH)) {
-      filter['trackedReserveETH_gte'] = trackedReserveETH;
+      filter["trackedReserveETH_gte"] = trackedReserveETH;
     }
     if (Array.isArray(tokens) && tokens.length) {
-      filter['token0_in'] = tokens;
-      filter['token1_in'] = tokens;
+      filter["token0_in"] = tokens;
+      filter["token1_in"] = tokens;
     }
 
     return filter;
@@ -292,7 +317,12 @@ export class SubgraphProviderV2 extends SubgraphProvider<RawPoolV2, PoolV2, Flat
   protected override poolsQuery(): string {
     return gql`
       query getPools($pageSize: Int!, $filter: Pair_filter) {
-        items: pairs(first: $pageSize, orderBy: createdAtBlockNumber, orderDirection: asc, where: $filter) {
+        items: pairs(
+          first: $pageSize
+          orderBy: createdAtBlockNumber
+          orderDirection: asc
+          where: $filter
+        ) {
           id
           createdAtBlockNumber
           token0 {
@@ -310,7 +340,11 @@ export class SubgraphProviderV2 extends SubgraphProvider<RawPoolV2, PoolV2, Flat
   }
 }
 
-export class SubgraphProviderV3 extends SubgraphProvider<RawPoolV3, PoolV3, FlatPoolV3> {
+export class SubgraphProviderV3 extends SubgraphProvider<
+  RawPoolV3,
+  PoolV3,
+  FlatPoolV3
+> {
   protected override getUrl(): string {
     const base = `https://gateway.thegraph.com/api/${this.apiKey}/subgraphs/id`;
     switch (this.chainId) {
@@ -342,8 +376,12 @@ export class SubgraphProviderV3 extends SubgraphProvider<RawPoolV3, PoolV3, Flat
         return `${base}/GZWDNw5b7XH2iqnmG91FLDDkfEVEDQotfPv4GMdraEKY`;
       case ChainId.UNICHAIN_SEPOLIA:
         return `${base}/5Tf9s7syYLHQzhmtjukjTjmhFwx7c3hrdVxy4jo3TgCC`;
+      case ChainId.OPTIMISM:
+        return `${base}/EgnS9YE1avupkvCNj9fHnJxppfEmNNywYJtghqiu2pd9`;
       default:
-        throw new Error(`v3 subgraph endpoint for chainId ${this.chainId} is not set`);
+        throw new Error(
+          `v3 subgraph endpoint for chainId ${this.chainId} is not set`
+        );
     }
   }
 
@@ -365,7 +403,16 @@ export class SubgraphProviderV3 extends SubgraphProvider<RawPoolV3, PoolV3, Flat
   }
 
   public override fromFlat(flatPool: FlatPool): PoolV3 {
-    const [id, token0, token1, createdAtBlockNumber, feeTier, liquidity, tvlETH, tvlUSD] = flatPool;
+    const [
+      id,
+      token0,
+      token1,
+      createdAtBlockNumber,
+      feeTier,
+      liquidity,
+      tvlETH,
+      tvlUSD,
+    ] = flatPool;
 
     return {
       id: id,
@@ -403,14 +450,14 @@ export class SubgraphProviderV3 extends SubgraphProvider<RawPoolV3, PoolV3, Flat
     };
 
     if (Number.isFinite(blockNumber)) {
-      filter['createdAtBlockNumber_gte'] = blockNumber;
+      filter["createdAtBlockNumber_gte"] = blockNumber;
     }
     if (Number.isFinite(trackedReserveETH)) {
       filter[`${this.getTVLNativeName()}_gte`] = trackedReserveETH;
     }
     if (Array.isArray(tokens) && tokens.length) {
-      filter['token0_in'] = tokens;
-      filter['token1_in'] = tokens;
+      filter["token0_in"] = tokens;
+      filter["token1_in"] = tokens;
     }
 
     return filter;
@@ -419,9 +466,9 @@ export class SubgraphProviderV3 extends SubgraphProvider<RawPoolV3, PoolV3, Flat
   private getTVLNativeName(): string {
     // only for this founded subgraph
     if (this.chainId === ChainId.UNICHAIN_SEPOLIA) {
-      return 'totalValueLockedNative';
+      return "totalValueLockedNative";
     }
-    return 'totalValueLockedETH';
+    return "totalValueLockedETH";
   }
 
   protected override poolsQuery(): string {
@@ -446,7 +493,11 @@ export class SubgraphProviderV3 extends SubgraphProvider<RawPoolV3, PoolV3, Flat
   }
 }
 
-export class SubgraphProviderV4 extends SubgraphProvider<RawPoolV4, PoolV4, FlatPoolV4> {
+export class SubgraphProviderV4 extends SubgraphProvider<
+  RawPoolV4,
+  PoolV4,
+  FlatPoolV4
+> {
   protected override getUrl(): string {
     const base = `https://gateway.thegraph.com/api/${this.apiKey}/subgraphs/id`;
     switch (this.chainId) {
@@ -462,8 +513,12 @@ export class SubgraphProviderV4 extends SubgraphProvider<RawPoolV4, PoolV4, Flat
         return `${base}/HNCFA9TyBqpo5qpe6QreQABAA1kV8g46mhkCcicu6v2R`;
       case ChainId.UNICHAIN:
         return `${base}/EoCvJ5tyMLMJcTnLQwWpjAtPdn74PcrZgzfcT5bYxNBH`;
+      case ChainId.OPTIMISM:
+        return `${base}/3Tn7Y1NJAr4ySKm7KFu1dwvH2WM3mHJnXzXAxQsdBDvW`;
       default:
-        throw new Error(`v4 subgraph endpoint for chainId ${this.chainId} is not set`);
+        throw new Error(
+          `v4 subgraph endpoint for chainId ${this.chainId} is not set`
+        );
     }
   }
 
@@ -487,7 +542,18 @@ export class SubgraphProviderV4 extends SubgraphProvider<RawPoolV4, PoolV4, Flat
   }
 
   public override fromFlat(flatPool: FlatPool): PoolV4 {
-    const [id, token0, token1, createdAtBlockNumber, feeTier, tickSpacing, hooks, liquidity, tvlETH, tvlUSD] = flatPool;
+    const [
+      id,
+      token0,
+      token1,
+      createdAtBlockNumber,
+      feeTier,
+      tickSpacing,
+      hooks,
+      liquidity,
+      tvlETH,
+      tvlUSD,
+    ] = flatPool;
 
     return {
       id: id,
@@ -527,14 +593,14 @@ export class SubgraphProviderV4 extends SubgraphProvider<RawPoolV4, PoolV4, Flat
     const filter = {};
 
     if (Number.isFinite(blockNumber)) {
-      filter['createdAtBlockNumber_gte'] = blockNumber;
+      filter["createdAtBlockNumber_gte"] = blockNumber;
     }
     if (Number.isFinite(trackedReserveETH)) {
-      filter['totalValueLockedETH_gte'] = trackedReserveETH;
+      filter["totalValueLockedETH_gte"] = trackedReserveETH;
     }
     if (Array.isArray(tokens) && tokens.length) {
-      filter['token0_in'] = tokens;
-      filter['token1_in'] = tokens;
+      filter["token0_in"] = tokens;
+      filter["token1_in"] = tokens;
     }
 
     return filter;
@@ -543,7 +609,12 @@ export class SubgraphProviderV4 extends SubgraphProvider<RawPoolV4, PoolV4, Flat
   protected override poolsQuery(): string {
     return gql`
       query getPools($pageSize: Int!, $filter: Pool_filter) {
-        items: pools(first: $pageSize, orderBy: createdAtBlockNumber, orderDirection: asc, where: $filter) {
+        items: pools(
+          first: $pageSize
+          orderBy: createdAtBlockNumber
+          orderDirection: asc
+          where: $filter
+        ) {
           id
           createdAtBlockNumber
           token0 {

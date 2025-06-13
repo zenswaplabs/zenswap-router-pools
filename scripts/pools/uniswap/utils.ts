@@ -29,29 +29,34 @@ export enum ChainId {
   // Unichain
   UnichainMainnet = 130,
   UnichainSepolia = 1301,
+  // Worldchain
+  WorldchainMainnet = 480,
+  WorldchainSepolia = 4801,
 }
 
 export enum NetworkId {
-  EthereumMainnet = 'mainnet',
-  EthereumSepolia = 'sepolia',
-  BnbMainnet = 'bnb-mainnet',
-  BnbTestnet = 'bnb-testnet',
-  PolygonMainnet = 'polygon-mainnet',
-  PolygonAmoy = 'polygon-amoy',
-  AvalancheMainnet = 'avalanche-mainnet',
-  AvalancheFuji = 'avalanche-fuji',
-  ArbitrumMainnet = 'arbitrum-mainnet',
-  ArbitrumSepolia = 'arbitrum-sepolia',
-  BaseMainnet = 'base-mainnet',
-  BaseSepolia = 'base-sepolia',
-  OptimismMainnet = 'optimism-mainnet',
-  OptimismSepolia = 'optimism-sepolia',
-  BlastMainnet = 'blast-mainnet',
-  BlastSepolia = 'blast-sepolia',
-  CeloMainnet = 'celo-mainnet',
-  CeloAlfajores = 'celo-alfajores',
-  UnichainMainnet = 'unichain-mainnet',
-  UnichainSepolia = 'unichain-sepolia',
+  EthereumMainnet = "mainnet",
+  EthereumSepolia = "sepolia",
+  BnbMainnet = "bnb-mainnet",
+  BnbTestnet = "bnb-testnet",
+  PolygonMainnet = "polygon-mainnet",
+  PolygonAmoy = "polygon-amoy",
+  AvalancheMainnet = "avalanche-mainnet",
+  AvalancheFuji = "avalanche-fuji",
+  ArbitrumMainnet = "arbitrum-mainnet",
+  ArbitrumSepolia = "arbitrum-sepolia",
+  BaseMainnet = "base-mainnet",
+  BaseSepolia = "base-sepolia",
+  OptimismMainnet = "optimism-mainnet",
+  OptimismSepolia = "optimism-sepolia",
+  BlastMainnet = "blast-mainnet",
+  BlastSepolia = "blast-sepolia",
+  CeloMainnet = "celo-mainnet",
+  CeloAlfajores = "celo-alfajores",
+  UnichainMainnet = "unichain-mainnet",
+  UnichainSepolia = "unichain-sepolia",
+  WorldchainMainnet = "worldchain-mainnet",
+  WorldchainSepolia = "worldchain-sepolia",
 }
 
 export function getNetworkId(chainId: number): NetworkId {
@@ -96,6 +101,10 @@ export function getNetworkId(chainId: number): NetworkId {
       return NetworkId.UnichainMainnet;
     case ChainId.UnichainSepolia:
       return NetworkId.UnichainSepolia;
+    case ChainId.WorldchainMainnet:
+      return NetworkId.WorldchainMainnet;
+    case ChainId.WorldchainSepolia:
+      return NetworkId.WorldchainSepolia;
     default:
       throw new Error(`Network id is not defined for chain id ${chainId}`);
   }

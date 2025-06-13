@@ -1,6 +1,6 @@
-import { ChainId } from '@uniswap/sdk-core';
+import { ChainId } from "@uniswap/sdk-core";
 
-import { fetchPools } from './fetch';
+import { fetchPools } from "./fetch";
 
 type ChainConfig = {
   chainId: number;
@@ -13,6 +13,7 @@ const mainnets: ChainConfig[] = [
   { chainId: ChainId.ARBITRUM_ONE, whitelist: true },
   { chainId: ChainId.BASE, whitelist: true },
   { chainId: ChainId.AVALANCHE, whitelist: true },
+  { chainId: ChainId.OPTIMISM, whitelist: true },
 ];
 
 const testnets: ChainConfig[] = [
@@ -21,7 +22,7 @@ const testnets: ChainConfig[] = [
   { chainId: ChainId.BASE_SEPOLIA, whitelist: true, reserve: 0 },
 ];
 
-const versions = [2, 3];
+const versions = [2, 3, 4];
 
 async function fetchChainsPools(chainConfigs: ChainConfig[]): Promise<void> {
   for (const config of chainConfigs) {
@@ -36,12 +37,12 @@ async function fetchChainsPools(chainConfigs: ChainConfig[]): Promise<void> {
 }
 
 async function main() {
-  console.info('Fetching all uniswap pools...');
+  console.info("Fetching all uniswap pools...");
 
   await fetchChainsPools(testnets);
   await fetchChainsPools(mainnets);
 
-  console.info('Fetching completed!');
+  console.info("Fetching completed!");
 }
 
 await main();

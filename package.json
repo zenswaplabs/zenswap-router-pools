@@ -25,5 +25,8 @@
     "tsx": "^4.19.4",
     "typescript": "5.8.3"
   },
-  "packageManager": "yarn@1.22.22"
+  "packageManager": "yarn@1.22.22",
+  "dependencies": {
+    "graphql": "^16.11.0"
+  }
 }
